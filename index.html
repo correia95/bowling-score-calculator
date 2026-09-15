@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#4338ca" />
+
+    <title>Bowling Score Calculator — live 10-frame scoring</title>
+    <meta
+      name="description"
+      content="Tap in the pins knocked down on each roll and get a correctly-scored, live 10-frame bowling scoreboard — strikes, spares and the 10th-frame bonus balls all handled automatically. Free, saves your game locally, works offline."
+    />
+    <link rel="canonical" href="https://bowling-score-calculator.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bowling Score Calculator" />
+    <meta property="og:description" content="Tap the pins for each roll and get a correctly-scored, live 10-frame bowling scoreboard." />
+    <meta property="og:url" content="https://bowling-score-calculator.correia95.workers.dev/" />
+    <meta property="og:image" content="https://bowling-score-calculator.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bowling Score Calculator" />
+    <meta name="twitter:description" content="Live, correct 10-frame bowling scoring — strikes, spares and 10th-frame bonus balls handled." />
+    <meta name="twitter:image" content="https://bowling-score-calculator.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Bowling Score Calculator",
+        "url": "https://bowling-score-calculator.correia95.workers.dev/",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "A ten-pin bowling scorer. Tap the number of pins knocked down on each roll and it keeps a live, correctly-computed scoreboard for all ten frames, handling strikes, spares and the tenth frame's bonus balls, including the pin-reset rules for a strike or spare in the final frame. Runs entirely in the browser and saves the current game locally."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is bowling scored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There are ten frames, each with up to two balls. A strike (all ten pins on the first ball) scores 10 plus the next two balls bowled. A spare (clearing the rack over two balls) scores 10 plus the next one ball. An open frame scores just the pins knocked down in it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does scoring work in the 10th frame?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 10th frame has no next frame to borrow a bonus from, so it awards its bonus balls directly: a spare earns one extra ball and a strike earns two, each bowled against a freshly re-racked set of ten pins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a perfect game?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Twelve strikes in a row — one in each of the first nine frames, plus three in the tenth — for the maximum possible score of 300."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this work for candlepin or duckpin bowling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, this calculator uses standard ten-pin scoring rules (two balls per frame, ten pins). Candlepin and duckpin use a third ball per frame and different scoring conventions."
+            }
+          }
+        ]
+      }
+    </script>
+    <style>
+      .tt-nav { box-sizing: border-box; width: 100%; margin: 0; background: #f1f1f4; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .tt-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; text-decoration: none; color: #3730a3; font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .tt-nav a:hover { color: #1e1b4b; text-decoration: underline; }
+      .tt-nav svg { width: 14px; height: 14px; flex: none; }
+      @media (prefers-color-scheme: dark) {
+        .tt-nav { background: #15151b; border-bottom-color: rgba(255, 255, 255, 0.12); }
+        .tt-nav a { color: #c7d2fe; }
+        .tt-nav a:hover { color: #e0e7ff; }
+      }
+      @media print { .tt-nav { display: none !important; } }
+    </style>
+  </head>
+  <body>
+    <nav class="tt-nav"><a href="https://tinytools.correia95.workers.dev/" aria-label="TinyTools home — all tools and games"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg><span>TinyTools</span></a></nav>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">This bowling score calculator needs JavaScript to score your game as you go.</p>
+    </noscript>
+  </body>
+</html>

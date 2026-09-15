@@ -1,0 +1,126 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f4f4f8;
+  --card: #ffffff;
+  --card-2: #e9e9f2;
+  --ink: #191a2e;
+  --ink-soft: #5c5f78;
+  --line: #dfe0ec;
+  --accent: #4338ca;
+  --accent-ink: #ffffff;
+  --strike: #dc2626;
+  --spare: #0369a1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b16;
+    --card: #16172a;
+    --card-2: #1e2038;
+    --ink: #e9e9f5;
+    --ink-soft: #9a9cba;
+    --line: #2a2c48;
+    --accent: #818cf8;
+    --accent-ink: #14152a;
+    --strike: #f87171;
+    --spare: #38bdf8;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app { max-width: 620px; margin: 0 auto; padding: 24px 18px 60px; }
+
+header h1 { margin: 0 0 6px; font-size: 1.7rem; letter-spacing: -0.02em; }
+.tag { margin: 0 0 18px; color: var(--ink-soft); font-size: 0.94rem; }
+
+.board-wrap { overflow-x: auto; margin-bottom: 16px; -webkit-overflow-scrolling: touch; }
+.board {
+  display: flex;
+  gap: 4px;
+  min-width: 560px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px;
+}
+.frame {
+  flex: 1;
+  min-width: 50px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+.frame.active { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent); }
+.frame-num { font-size: 0.68rem; color: var(--ink-soft); padding: 3px 0 2px; background: var(--card-2); }
+.marks { display: flex; border-bottom: 1px solid var(--line); }
+.marks[data-boxes='3'] .mark-box { width: 33.33%; }
+.marks[data-boxes='2'] .mark-box { width: 50%; }
+.mark-box {
+  flex: none;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  border-left: 1px solid var(--line);
+}
+.mark-box:first-child { border-left: none; }
+.frame-score { padding: 6px 0; font-size: 1rem; font-weight: 800; font-variant-numeric: tabular-nums; min-height: 1.4em; }
+
+.pins { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-bottom: 16px; }
+.pins-label { margin: 0 0 12px; font-size: 0.95rem; color: var(--ink-soft); text-align: center; }
+.pin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(46px, 1fr)); gap: 8px; margin-bottom: 14px; }
+.pin {
+  padding: 12px 4px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card-2);
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.pin.strike { background: var(--strike); color: #fff; border-color: var(--strike); }
+.pin.spare { background: var(--spare); color: #fff; border-color: var(--spare); }
+
+.result { background: var(--card); border: 1px solid var(--accent); border-radius: 14px; padding: 20px; margin-bottom: 16px; text-align: center; }
+.r-big { margin: 0 0 6px; font-size: 1.1rem; }
+.r-big span { font-size: 2.4rem; font-weight: 800; color: var(--accent); display: block; line-height: 1.2; }
+.r-best { margin: 0 0 14px; font-size: 0.86rem; color: var(--ink-soft); }
+
+.actions { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.actions button {
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--card-2);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+.result .actions button:first-child { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.actions button:disabled { opacity: 0.4; cursor: default; }
+
+.explainer { border-top: 1px solid var(--line); padding-top: 20px; color: var(--ink-soft); font-size: 0.94rem; }
+.explainer h2 { color: var(--ink); font-size: 1.15rem; margin: 0 0 10px; }
+.explainer h3 { color: var(--ink); font-size: 1rem; margin: 18px 0 6px; }
+.explainer p { margin: 0 0 10px; }
+.explainer strong { color: var(--ink); }
+.explainer footer { margin-top: 20px; font-size: 0.85rem; opacity: 0.75; }
+
+@media print { .tt-nav { display: none !important; } }

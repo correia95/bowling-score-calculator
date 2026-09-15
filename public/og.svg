@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b0b16"/>
+  <g transform="translate(870 300)">
+    <circle cx="0" cy="-70" r="24" fill="#e9e9f5"/>
+    <circle cx="-3" cy="-79" r="2.4" fill="#0b0b16"/><circle cx="3" cy="-79" r="2.4" fill="#0b0b16"/><circle cx="0" cy="-72" r="2.4" fill="#0b0b16"/>
+    <circle cx="-30" cy="-20" r="24" fill="#e9e9f5"/>
+    <circle cx="-33" cy="-29" r="2.4" fill="#0b0b16"/><circle cx="-27" cy="-29" r="2.4" fill="#0b0b16"/><circle cx="-30" cy="-22" r="2.4" fill="#0b0b16"/>
+    <circle cx="30" cy="-20" r="24" fill="#e9e9f5"/>
+    <circle cx="27" cy="-29" r="2.4" fill="#0b0b16"/><circle cx="33" cy="-29" r="2.4" fill="#0b0b16"/><circle cx="30" cy="-22" r="2.4" fill="#0b0b16"/>
+    <path d="M-70 60c8-16 8-32 0-48" fill="none" stroke="#818cf8" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="80" y="200" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="82" font-weight="800" fill="#efeff7" letter-spacing="-2">Bowling Score</text>
+  <text x="80" y="284" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="82" font-weight="800" fill="#818cf8" letter-spacing="-2">Calculator</text>
+  <text x="82" y="348" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="27" fill="#a5a8d6">tap the pins → live, correct 10-frame scoring</text>
+  <text x="80" y="404" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="23" fill="#9a9cba">Strikes, spares and the tricky 10th-frame bonus balls</text>
+  <text x="80" y="450" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="20" fill="#818cf8">free · no sign-up · works offline</text>
+</svg>
